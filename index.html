@@ -3,6 +3,7 @@
 <head>
     <title>Feedbook</title>
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -13,9 +14,7 @@
         </div>
         <div class="right">
             <div class="container">
-                <input type="text" class="input" name="email" id="email" placeholder="Email address or username"
-                    autofocus="1" aria-label="Email address or phone number">
-                <input type="text" class="input" name="fullname" id="full_name" placeholder="Full name"
+                <input type="text" class="input" name="email" id="email_login" placeholder="Email address or username"
                     autofocus="1" aria-label="Email address or phone number">
                 <input type="password" class="input" name="pass" id="pass" placeholder="Password" aria-label="Password">
                 <button class="login" name="loginbtn" type="submit" id="login">Log In</button>
@@ -41,11 +40,14 @@
               <form id="add-form">
                   <div id="task-description">
                       <h3 for="text">username</h3>
-                      <input type="text" class="form-control" id="username" placeholder="username"><br>
+                      <input type="text" class="form-control" id="username_signup" placeholder="username"><br>
+                      <h3 for="text">Full Name</h3>
+                      <input type="text" class="form-control" name="fullname" id="full_name" placeholder="Full name"
+                      autofocus="1" aria-label="Email address or phone number">
                       <h3 for="text">Email</h3>
-                      <input type="email" class="form-control" id="email" placeholder="email">
+                      <input type="email" class="form-control" id="email_signup" placeholder="email">
                       <h3 for="text">Password</h3>
-                      <input type="password" class="form-control" id="password" placeholder="password">
+                      <input type="password" class="form-control" id="password_signup" placeholder="password">
                       <h4>Gender</h4>    
                       <ul style="list-style-type: none">
                           <li><input type="radio" class="level" value="0" name="levels"><label>Level 1</label></input></li>
