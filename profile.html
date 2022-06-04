@@ -1,70 +1,102 @@
 <html>
+
 <head>
-    
-    <title>Feedbook</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="./css/styles.css" rel="stylesheet" type="text/css"/>
-    <link href="./css/menue.css" rel="stylesheet" type="text/css" />
+
+  <title>Feedbook</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="./css/menue.css" rel="stylesheet" type="text/css" />
+
+
 </head>
+
 <body>
-    <!-- menue -->
-    <div class="header">
-        <a href="#"><div class="logo"></div></a>
-        <div class="search">
-          <input type="text" id="inputText" placeholder="Search Feedbook">
-          <div class="search-icon">
-          <img src="./assets/Very-Basic-Search-icon.png" ></img>
-          </div>
+  <!-- menue -->
+  <div class="header">
+    <a href="#">
+      <div class="logo"></div>
+    </a>
+    <div class="search">
+      <div class="search-bar">
+        <input type="text" id="inputText" placeholder="Search Feedbook">
+        <div class="search-icon">
+          <img src="./assets/Very-Basic-Search-icon.png"></img>
         </div>
-        <div class="right-side">
-          <div class="leftofright">
-            <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
-            <a href="#">username</a>
-            <p>| </p>
-            <a href="#" id="logout"> Logout</a>
-          </div>
+        <div class="search-menu" style="display:none">
+          <ul id="ul">
+          </ul>
         </div>
       </div>
-      <div class="post">
-        <div class="postText">hey there</div>
-        <div class="image"><img src="./assets/feedbook.png"></div>
-        <div class="likes"><img src="./assets/like.jpg">15 likes</div>
-        <div class="comments">
-          <div class="title">20 Comment</div>
-          <div class="comment">
-            <div class="user">
-              <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
-              <a href="#" class="username">username</a>
-            </div>
-            <div class="text"><p>hy</p></div>
+    </div>
+    <div class="right-side">
+      <div class="leftofright">
+        <a href="#" id="profile-pic"><img class="profile-pic" style="width: 30px" id="profile-icon"
+            src="./assets/default-profile-img.jpg"></a>
+        <a href="#" id="profile">username</a>
+        <p>| </p>
+        <a href="#" id="logout"> Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-info-bar">
+    <div class="user-info-bar-left">
+      <img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
+      <a href="#">username</a>
+    </div>
+    <div class="friends">
+      <ul class="friends-profile" id="friends-profile">
+      </ul>
+    </div>
+    <div class="post">
+      <div class="postText">hey there</div>
+      <div class="image"><img src="./assets/feedbook.png"></div>
+      <div class="likes"><img src="./assets/like.jpg">15 likes</div>
+      <div class="comments">
+        <div class="title">20 Comment</div>
+        <div class="comment">
+          <div class="user">
+            <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon"
+                src="./assets/default-profile-img.jpg"></a>
+            <a href="#" class="username">username</a>
           </div>
-          <div class="comment">
-            <div class="user">
-              <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
-              <a href="#">username</a>
-            </div>
-            <div class="text"></div>
+          <div class="text">
+            <p>hy</p>
           </div>
-          <div class="comment">
-            <div class="user">
-              <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
-              <a href="#">username</a>
-            </div>
-            <div class="text"></div>
+        </div>
+        <div class="comment">
+          <div class="user">
+            <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon"
+                src="./assets/default-profile-img.jpg"></a>
+            <a href="#">username</a>
           </div>
-          <div class="commentPlace">
-          <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon" src="./assets/default-profile-img.jpg"></a>
+          <div class="text"></div>
+        </div>
+        <div class="comment">
+          <div class="user">
+            <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon"
+                src="./assets/default-profile-img.jpg"></a>
+            <a href="#">username</a>
+          </div>
+          <div class="text"></div>
+        </div>
+        <div class="commentPlace">
+          <a href="#"><img class="profile-pic" style="width: 30px" id="profile-icon"
+              src="./assets/default-profile-img.jpg"></a>
           <a href="#">username</a>
           <input type="text" class="commentText" placeholder="Comment">
-        </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- function that inserts menue.html in the body -->
+  </div>
+  </div>
+  <!-- function that inserts menue.html in the body -->
 
-    <script src="scripts/profile.js"></script>
+  <script src="scripts/profile.js"></script>
 </body>
 
 </html>

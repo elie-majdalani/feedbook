@@ -316,3 +316,37 @@ body{
     flex-wrap: nowrap;
     flex-direction: column;
 }
+.search-menu{
+    width: 100%;
+    max-height: 250px;
+    background-color: #f0f2f5;
+    overflow:hidden;
+    overflow-y:auto
+  }
+  ul{
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-left: -9%;
+  }
+  li{
+      height: 30px;
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      padding-bottom: 1%;
+  }
+  .pic{
+      height: 100%;
+  }
+  .friends{
+      width: 20% !important;
+      background-color: #aba3a3 !important;
+  }
+  .friends-profile{
+      width: auto !important;
+  }
+  .friends-list{
+      font-weight: bolder;
+  }

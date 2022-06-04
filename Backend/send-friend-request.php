@@ -5,7 +5,7 @@ $user_id = $_GET["id"];
 $friend_id = $_GET["friend_id"];
 
 $query = $mysqli->prepare("SELECT * FROM relationship WHERE user_id = ? and friend_id = ? AND relation = 0");
-$query->bind_param("ii", $friend_id, $user_id);
+$query->bind_param("ii", $user_id, $friend_id);
 $query->execute();
 $query->store_result();
 $num_rows = $query->num_rows;
