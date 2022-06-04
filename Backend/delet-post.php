@@ -1,4 +1,5 @@
 <?php
+include("connection.php");
 $id=$_get["post_id"];
 
 $query = $mysqli->prepare("DELETE FROM posts WHERE id = ?");

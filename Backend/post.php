@@ -1,4 +1,5 @@
 <?php
+include("connection.php");
 $img=$_get["img"];
 $text=$_get["text"];
 $id=$_get["user_id"];
