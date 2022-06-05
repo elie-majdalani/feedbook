@@ -2,6 +2,7 @@
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="./css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,107 +21,20 @@
         </div>
 
         <div class="status">
-          <textarea type="text" placeholder="What's on your mind?"></textarea>
+          <textarea type="text" id="add-post" placeholder="What's on your mind?"></textarea>
         </div>
       </div>
       <div class="my-post-footer">
-        <button type="button" class="btn-img">+</button>
+        <button type="button" class="btn-img" id ="add-post-button">+</button>
       </div>
     </div>
 
 
 <!-- Posts section -->
-    <div class="posts">
+    <div class="posts" id="posts">
 
-      <!--post example-->
-      <div class="post">
-        <div class="post-header">
-          <div class="right-post-header">
-            <div class="avatar">
-              <img
-                src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png">
-            </div>
-            <div class="name">
-              <h3>John Doe</h3>
-            </div>
-          </div>
-          <div class="left-post-header">
-            <div class="delete-post">
-              <button type="button" class="delete-post-btn">x</button>
-            </div>
-          </div>
-        </div>
-       
 
-        <div class="post-content">
-          <span> this is a status</span>
-          <img src="https://a.cdn-hotels.com/gdcs/production180/d1647/96f1181c-6751-4d1b-926d-e39039f30d66.jpg?impolicy=fcrop&w=800&h=533&q=medium" />
-        </div>
-
-        <div class="post-likes">
-          <span>235 <img src="./assets/like.jpg"/></span>
-        </div>
-        <div class="post-footer">
-          <button class="post-footer-btn">Like</button>
-          <button class="post-footer-btn">Comment</button>
-
-        </div>
-        <div class="post-comments-section">
-          <div class="comments">
-            <div class="comment-container">
-              <div class="comment-avatar">
-                <img src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png" />
-              </div>
-              <div class="comment">
-                <span><b>full name</b></span>
-                <span> comment text</span>
-              </div>
-
-            </div>
-            <div class="comment-container">
-              <div class="comment-avatar">
-                <img src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png" />
-              </div>
-              <div class="comment">
-                <span> full name</span>
-                <span> comment text</span>
-              </div>
-
-            </div>
-            <div class="comment-container">
-              <div class="comment-avatar">
-                <img src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png" />
-              </div>
-              <div class="comment">
-                <span> full name</span>
-                <span> comment text</span>
-              </div>
-
-            </div>
-            <div class="comment-container">
-              <div class="comment-avatar">
-                <img src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png" />
-              </div>
-              <div class="comment">
-                <span> full name</span>
-                <span> comment text</span>
-              </div>
-
-            </div>
-          
-          </div>
-
-          <div class="my-comment-section">
-            <div class="my-avatar">
-              <img src="https://e7.pngegg.com/pngimages/10/446/png-clipart-roblox-corporation-doge-dog-breed-others-template-game.png" />
-            </div>
-            <div class="my-comment">
-              <input class="my-comment-imput" />
-            </div>
-          </div>
-
-        </div>
-      </div>
+      
 
 
     </div>

@@ -1,4 +1,4 @@
-if(localStorage.getItem("user_id")==null || localStorage.getItem("user_id")=="0"){
+if(localStorage.getItem("user_id")==null || localStorage.getItem("user_id")=="0" || localStorage.getItem("user_id") == undefined){
 // Get the modal
 var modal = document.getElementById("adds");
 

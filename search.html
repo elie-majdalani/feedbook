@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -21,133 +22,13 @@
 
     <div class="search-container">
         <form class="example" action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input id = "search-bar" type="text" placeholder="Search.." name="search">
+            <button id="search-button" type="button"><i class="fa fa-search"></i></button>
         </form>
     </div>
     <!--Friends Div-->
     <div class="main-friends-divs">
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-        <!--friend Div-->
-        <div class="friend-div">
-            <img src="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.6435-9/156112152_3872412176154913_197491733048019091_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2T17NiJFXuMAX_FSl66&_nc_ht=scontent.fbey5-1.fna&oh=00_AT_YoObDiRYGXc02b3IVy8rh7W0N1T_S66uOhtAesijRAw&oe=62BFD4D2"
-                alt="Avatar" class="avatar-img" />
-            <span>Full Name</span>
-            <button class="add-friend-btn">Add Friend</button>
-            <button class="block-btn">Block</button>
-            <button class="unblock-btn">Unblock</button>
-            <button class="remove-friend-btn">Remove Friend</button>
-        </div>
-
+       
     </div>
 
 
