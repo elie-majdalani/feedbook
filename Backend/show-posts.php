@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$id=$_get["user_id"];
+$id=$_GET["user_id"];
 
 $query = $mysqli->prepare("select * from posts where user_id = ?");
 $query->bind_param("i", $id);

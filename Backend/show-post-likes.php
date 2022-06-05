@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$id=$_get["post_id"];
+$id=$_GET["post_id"];
 
 $query= $mysqli->prepare("select count(*) as likes from likes where post_id = ?");
 $query->bind_param("i", $id);
