@@ -37,6 +37,7 @@ document.getElementById("login").addEventListener("click", function () {
     params: data
 })
     .then(function (response) {
+      debugger
         let result = response.data;
         let id = result.user_id;
         debugger
@@ -46,12 +47,13 @@ document.getElementById("login").addEventListener("click", function () {
         }
         else{
         window.localStorage.setItem('user_id', id);
+        window.localStorage.setItem('goto', id);
         window.location.href = "index.html";
 }
     })
 })
 
-document.getElementById("ceate").addEventListener("click", function () {
+document.getElementById("create").addEventListener("click", function () {
   user_name = document.getElementById("username_signup").value
   user_email = document.getElementById("email_signup").value
   user_fullName = document.getElementById("full_name").value
@@ -64,7 +66,6 @@ document.getElementById("ceate").addEventListener("click", function () {
     }}
   }
   user_date = document.getElementById("day").value;
-  debugger
   let data = {
     user_name,
     user_email,
@@ -80,10 +81,9 @@ document.getElementById("ceate").addEventListener("click", function () {
     params: data
 })
     .then(function (response) {
-        debugger
         console.log(response.data)
-        window.location.href = "profile.html";
-
+        localStorage.setItem('user_id', 0);
+        window.location.href = "index.html";
     })
 })
 }

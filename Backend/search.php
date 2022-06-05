@@ -2,10 +2,11 @@
 include("connection.php");
 
 $name = $_GET["searchValue"];
+$id = $_GET["user_id"];
 
 
-$query = $mysqli->prepare("SELECT * FROM users u where (username LIKE concat('%',?,'%') OR full_name LIKE concat('%',?,'%') OR email LIKE ?)AND  u.id != (SELECT r.friend_id from users u INNER JOIN relationships r ON r.user_id = u.id WHERE r.relation =-1)");
-$query->bind_param("sss", $name,$name,$name);
+$query = $mysqli->prepare("SELECT users.*,relationships.relation FROM users LEFT JOIN relationships on users.id = relationships.friend_id AND relationships.user_id=? WHERE (users.id != ? OR users.id = NULL) AND users.id NOT IN ( SELECT relationships.friend_id FROM relationships WHERE relationships.user_id = ? AND relationships.relation = '-1') AND (users.username LIKE CONCAT('%',?,'%')  OR users.full_name LIKE CONCAT('%',?,'%') OR users.email LIKE CONCAT('%',?,'%'));");
+$query->bind_param("iiisss", $id,$id,$id,$name,$name,$name);
 $query->execute();
 $array = $query->get_result();
 $response = [];

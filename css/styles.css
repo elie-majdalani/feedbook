@@ -645,3 +645,70 @@ form.example::after {
   background-color: #ff0000;
   color: rgb(247, 241, 241);
 }
+
+/* profile page section */
+.profile-main-div-container{
+  width:85%;
+  display: flex;
+}
+.profile-main-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.profile-main-div .profile-right-main-div{
+  width:35%;
+  height: 100%;
+  background-color: #e7e3e3;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-main-div .profile-right-main-div .avatar{
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.profile-main-div .profile-right-main-div img{
+  width: 90%;
+  margin-top: 80px;
+  border-radius: 20px;
+}
+
+.centering-profile-div{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.profile-right-main-div-under-pic{
+  margin-top: 20px;
+}
+
+.profile-right-main-div-under-pic .user-data{
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-right-main-div-under-pic .user-data span{
+  margin-right: 20px;
+  font-size: 30px;
+}
+.profile-right-main-div-under-pic{
+  width: 90%;
+}
+.profile-left-main-div{
+  width:50% ;
+  height: 100%;
+  margin-left: 100px;
+}
+.post-likes .expand{
+  content:url("/assets/like.jpg");
+}
+.post-likes .collapse{
+  content:url("/assets/liked.jpg");
+}

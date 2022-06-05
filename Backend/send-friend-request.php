@@ -12,7 +12,6 @@ $num_rows = $query->num_rows;
 $query->fetch();
 $response = [];
 
-echo $num_rows;
 if($num_rows == 1){
     $query = $mysqli->prepare("UPDATE relationships SET relation= 1 WHERE friend_id = ? and user_id = ?");
     $query->bind_param("ii", $friend_id, $user_id);
